@@ -1,8 +1,11 @@
-import { BRAND, APP_REPO_URL, README_URL } from "../brand";
+import { BRAND, APP_REPO_URL, README_URL, RELEASES_URL, CONTRIBUTE_URL, STAR_URL } from "../brand";
 import { WaveIndicator } from "./WaveIndicator";
-import { GitHubIcon, ArrowRightIcon, TerminalIcon } from "./icons";
+import { GitHubIcon, DownloadIcon, StarIcon, CodeForkIcon, TerminalIcon, ArrowRightIcon } from "./icons";
+import { getOS } from "../os";
 
 export function Hero() {
+  const detected = getOS();
+
   return (
     <section id="top" className="relative overflow-hidden">
       {/* Ambient emerald glow */}
@@ -27,27 +30,53 @@ export function Hero() {
             {BRAND.description}
           </p>
 
+          {/* Primary CTAs — Download + Star + Contribute */}
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
+            {/* Download — platform detected */}
             <a
-              href={APP_REPO_URL}
+              href={RELEASES_URL}
+              className="flex w-full items-center justify-center gap-2.5 rounded-xl bg-emerald-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/15 transition hover:bg-emerald-500 sm:w-auto"
+            >
+              <detected.Icon className="h-4.5 w-4.5" />
+              <DownloadIcon className="h-4 w-4" />
+              Download {detected.label}
+            </a>
+
+            {/* Star on GitHub */}
+            <a
+              href={STAR_URL}
               target="_blank"
               rel="noreferrer noopener"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/10 transition hover:bg-emerald-500 sm:w-auto"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-amber-500/10 px-4 py-3 text-sm font-semibold text-amber-400 ring-1 ring-amber-500/20 transition hover:bg-amber-500/20 sm:w-auto"
             >
-              <GitHubIcon className="h-4 w-4" />
-              View on GitHub
+              <StarIcon className="h-4 w-4" />
+              Star on GitHub
             </a>
+
+            {/* Contribute */}
+            <a
+              href={CONTRIBUTE_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-800 px-4 py-3 text-sm font-semibold text-neutral-100 ring-1 ring-white/5 transition hover:bg-neutral-700 sm:w-auto"
+            >
+              <CodeForkIcon className="h-4 w-4" />
+              Contribute
+            </a>
+          </div>
+
+          {/* Secondary: source build */}
+          <p className="mt-4 text-center text-xs text-neutral-500 lg:text-left">
+            Prefer building from source?{" "}
             <a
               href={README_URL}
               target="_blank"
               rel="noreferrer noopener"
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-800 px-5 py-3 text-sm font-semibold text-neutral-100 ring-1 ring-white/5 transition hover:bg-neutral-700 sm:w-auto"
+              className="inline-flex items-center gap-1 font-medium text-neutral-400 underline decoration-neutral-600 underline-offset-2 transition hover:text-neutral-200 hover:decoration-neutral-400"
             >
-              <TerminalIcon className="h-4 w-4" />
-              Build from source
-              <ArrowRightIcon className="h-4 w-4" />
+              Read the guide <ArrowRightIcon className="h-3 w-3" />
             </a>
-          </div>
+          </p>
         </div>
 
         {/* App status card mockup — mirrors the recording state from App.tsx */}

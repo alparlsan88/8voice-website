@@ -16,3 +16,12 @@ export const APP_REPO_URL = "https://github.com/alparlsan88/8voice";
 export const README_URL = `${APP_REPO_URL}#readme`;
 export const CHANGELOG_URL = `${APP_REPO_URL}/blob/main/CHANGELOG.md`;
 export const LICENSE_URL = `${APP_REPO_URL}/blob/main/LICENSE`;
+
+// GitHub releases (download page — platform installers live here)
+export const RELEASES_URL = `${APP_REPO_URL}/releases/latest`;
+
+// Contribute (issues, PRs)
+export const CONTRIBUTE_URL = `${APP_REPO_URL}/blob/main/CONTRIBUTING.md`;
+
+// Star the repo
+export const STAR_URL = `${APP_REPO_URL}`;
