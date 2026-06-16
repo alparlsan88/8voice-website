@@ -1,0 +1,52 @@
+@import "tailwindcss";
+/* Sadece Latin + Latin-Extended subset'leri — gereksiz 40+ dil dosyasını
+   (cyrillic, greek, hebrew, vietnamese, math, symbols) budar. */
+@import "@fontsource/open-sans/latin-400.css";
+@import "@fontsource/open-sans/latin-600.css";
+@import "@fontsource/open-sans/latin-700.css";
+@import "@fontsource/open-sans/latin-ext-400.css";
+@import "@fontsource/open-sans/latin-ext-600.css";
+@import "@fontsource/open-sans/latin-ext-700.css";
+
+:root {
+  font-family: "Open Sans", Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(10 10 10); /* neutral-950 */
+  color: rgb(245 245 245); /* neutral-100 */
+}
+
+/* Smooth in-page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Equalizer wave animation — the app's signature recording indicator.
+   Ported from src/index.css so the landing page shares the brand's motion
+   language. Bar height oscillates between 8px and 28px. */
+.voice-wave {
+  animation: voice-wave 900ms ease-in-out infinite alternate;
+}
+@keyframes voice-wave {
+  0%   { height: 8px; }
+  25%  { height: 22px; }
+  50%  { height: 14px; }
+  75%  { height: 28px; }
+  100% { height: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .voice-wave {
+    animation: none;
+    height: 16px;
+  }
+}
