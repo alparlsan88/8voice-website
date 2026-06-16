@@ -1,6 +1,7 @@
 import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { Features } from "./components/Features";
+import { WidgetShowcase } from "./components/WidgetShowcase";
 import { HowItWorks } from "./components/HowItWorks";
 import { Privacy } from "./components/Privacy";
 import { Providers } from "./components/Providers";
@@ -13,6 +14,7 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <WidgetShowcase />
         <Features />
         <HowItWorks />
         <Privacy />

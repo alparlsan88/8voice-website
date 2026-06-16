@@ -3,6 +3,7 @@ import { LogoMark } from "./LogoMark";
 import { GitHubIcon, StarIcon, DownloadIcon } from "./icons";
 
 const LINKS = [
+  { href: "#widget", label: "Widget" },
   { href: "#features", label: "Features" },
   { href: "#how", label: "How it works" },
   { href: "#privacy", label: "Privacy" },
