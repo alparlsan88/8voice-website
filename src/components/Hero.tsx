@@ -1,6 +1,6 @@
-import { BRAND, APP_REPO_URL, README_URL, RELEASES_URL, CONTRIBUTE_URL, STAR_URL } from "../brand";
+import { BRAND, README_URL, RELEASES_URL, CONTRIBUTE_URL, STAR_URL } from "../brand";
 import { WaveIndicator } from "./WaveIndicator";
-import { GitHubIcon, DownloadIcon, StarIcon, CodeForkIcon, TerminalIcon, ArrowRightIcon } from "./icons";
+import { DownloadIcon, StarIcon, CodeForkIcon, ArrowRightIcon } from "./icons";
 import { getOS } from "../os";
 
 export function Hero() {
