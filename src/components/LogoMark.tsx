@@ -1,13 +1,13 @@
-// The 8voice logo mark: a white rounded square with a solid dark dot.
-// Mirrors the in-app header markup (App.tsx / Onboarding.tsx) so the brand
-// reads consistently across the app and the landing page.
+// The 8voice logo mark: white rounded square with a solid dark dot.
+// Uses the canonical SVG asset so the brand is pixel-identical across the
+// landing page, the app, the widget, and the desktop installer icons.
 
 export function LogoMark({ className = "" }: { className?: string }) {
   return (
-    <div
-      className={`flex shrink-0 items-center justify-center rounded-2xl bg-white shadow-lg ring-1 ring-white/20 ${className}`}
-    >
-      <span className="block rounded-full bg-neutral-900" style={{ width: "38%", height: "38%" }} />
-    </div>
+    <img
+      src="/logo.svg"
+      alt="8voice"
+      className={`shrink-0 ${className}`}
+    />
   );
 }
