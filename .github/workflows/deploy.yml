@@ -29,14 +29,11 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: '**/package-lock.json'
 
       - name: Install dependencies
-        working-directory: site
         run: npm ci
 
       - name: Build
-        working-directory: site
         run: npm run build
 
       - name: Setup Pages
@@ -45,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site/dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
