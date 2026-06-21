@@ -1,8 +1,14 @@
-# 8voice — Landing Page
+<p align="center">
+  <img src="./public/logo.svg" width="96" height="96" alt="8voice logo">
+</p>
 
-Marketing site for **8voice**, the privacy-first voice dictation desktop app.
-Built with Vite + React 19 + Tailwind CSS v4, sharing the app's design
-language (dark `neutral-950` + emerald accent, Open Sans, the equalizer wave).
+<h1 align="center">8voice — Landing Page</h1>
+
+<p align="center">
+  Marketing site for <strong>8voice</strong>, the privacy-first voice dictation desktop app.
+  Built with Vite + React 19 + Tailwind CSS v4, sharing the app's design
+  language (dark <code>neutral-950</code> + emerald accent, Open Sans, the equalizer wave).
+</p>
 
 ## Develop
 

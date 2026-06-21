@@ -5,7 +5,7 @@
 export function LogoMark({ className = "" }: { className?: string }) {
   return (
     <img
-      src="/logo.svg"
+      src={`${import.meta.env.BASE_URL}logo.svg`}
       alt="8voice"
       className={`shrink-0 ${className}`}
     />
